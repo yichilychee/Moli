@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+<title>Moli Home</title>  
+  <meta charset="UTF-8"> 
+	<!--Responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="shortcut icon" href="img/favicon.ico?cb=1">    
+  <link rel="stylesheet" href="stylesheet.css"/>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <style type="text/css">
+  .slider{
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    margin: 30px auto;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .shadow{
+    background-image: url(img/slider_shadow.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 1000px;
+    height: 144px;
+    margin: -30px auto;
+  }
+  .slider img{
+    width: 800px;
+    height: 500px;
+    display: none;
+  }
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript">
+  function Slider(){
+    $(".slider #1").show("fade",400);
+    $(".slider #1").delay(2500).hide("slide",{direction:"left"},400);
+
+    var sc = $(".slider img").size();
+    var count=2;
+
+    setInterval(function(){
+      $(".slider #"+count).show("slide",{direction:"right"},400);
+      $(".slider #"+count).delay(2500).hide("slide",{direction:"left"},400);
+
+      if(count==sc){
+        count = 1;
+      }else{
+        count=count+1;
+      }
+    },3500);
+  }
+</script>
+</head>
+<body  onload="Slider();">
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/en/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <header id="homeheader">
+    <div id="top">
+      <div id="top-writter">
+        <h1 id="header"><span id="site_title" class="site_title">Moli</span>&nbsp;&nbsp;&nbsp;Performing Art Ensemble</h1>
+      </div>
+      <div id="navigation">
+        <nav id="menu">
+          <ul>
+            <li class="selected"><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="clear"></div>
+  <!--slider-->
+  <div class="slider">
+    <img id="1" src="img/moli1.jpg" border="0" alt="slider1"/>
+    <img id="2" src="img/moli2.jpg" border="0" alt="slider2"/>
+    <img id="3" src="img/moli5.jpg" border="0" alt="slider3"/>
+    <img id="4" src="img/moli11.jpg" border="0" alt="slider4"/>
+  </div>
+  <div class="shadow"></div>
+
+  <div class="row homewords">
+    <span><br>Moli&nbsp;&nbsp;茉莉</span>
+    <br><br>Moli Dance Troupe was established in 2013 by a group of enthusiastic Chinese dance lovers. In the fall of 2013, Moli's very first debut dance "Xiu Se" (The elegance of the sleeves), performed in Mendelssohn Theater, was a huge success. "Xiu Se" and the dance troupe have since attracted many more students who are interested in Chinese culture and Chinese dance.
+    <br><br>
+    Our dance troupe aims to promote Chinese culture and eastern philosophy through the beauty of performing arts. Moli brings to our audience an eclectic collection of dances and performances that evolve from China's thousands years of history: from tribal ethnic dances, to ancient classical dances, and eventually to modern chinese fusion dances. Through Moli, we bring to the University of Michigan community a unique set of eastern movements, thinking, and arts.
+    <br><br>
+    Moli's literal meaning is the jasemine flower, which is a symbol of friendship in Chinese culture. We welcome both experienced and inexperienced dancers to join the dance troupe. In the long run, Moli aims to expand the realm of performance to Chinese Drama and Chinese costume modeling. We firmly believe that while Moli brings to our audience the best pieces of performing arts from Chinese culture, the strong interests in Eastern arts and dancing in the University of Michigan community will continue support us and help Moli grow. 
+    <br><br>
+    茉莉舞团是一个2013年成立的，以中国传统舞蹈为基础，向各艺术类演出发展的多元化社团。成立之初,就集结了一帮对热爱舞蹈,渴望在各方面展现和拓展自我的优秀社员，并在上学期的密大好声音上成功地完成了首秀《袖色》的演出。在华人圈留下了良好的口碑。2014年，我们再次启航。在春晚上，我们以新的姿态席卷而来，《以爱之名》为舞团带来不同的激情元素。敬请期待我们在Asian City，Closing Event以及非诚勿扰的演出！
+  </div>
+
+  <div class="follow">
+    <div class="fb-like-box" data-href="https://www.facebook.com/MoliUmich" data-width="870" data-height="330" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+  </div>
+  <div class="clear"></div>
+  <div class="row foot">
+    <a href="http://www.renren.com/569954491/profile"><img src="img/Renren_logo.png" id="leftlogo" alt="renren"></a>
+    <a href="https://www.facebook.com/MoliUmich"><img src="img/facebook-logo.jpg" id="rightlogo" alt="facebook"></a>
+  </div>
+  <footer>
+    <div class="clearr"></div>
+    <p>Copyright 2014 | Rococo | Moli</p>
+  </footer>
+    
+</body>
+</html>
